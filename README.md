@@ -2,15 +2,21 @@
 
 **Canonical-state infrastructure for reducing unnecessary computational work.**
 
+[Interactive Hugging Face Showcase](https://huggingface.co/spaces/Pjschiele1/axiomarc-showcase) · [AxiomARC at OMporium](https://www.omporium.biz/axiomarc) · [Contact OMporium](https://www.omporium.biz/)
+
 AxiomARC maintains canonical knowledge of computational state so a system can determine what already exists, what changed, what remains valid, and what actually needs to execute.
 
 This repository is the technical companion to the public AxiomARC Hugging Face showcase. It documents architecture boundaries, evidence classes, benchmark methodology, and integration concepts without exposing proprietary implementation details.
 
-## Explore
+## Mechanism overview
 
-- **Interactive showcase:** https://huggingface.co/spaces/Pjschiele1/axiomarc-showcase
-- **OMporium:** https://www.omporium.biz/
-- **AxiomARC:** https://www.omporium.biz/axiomarc
+![AxiomARC — Not Less Information. Less Work.](https://huggingface.co/spaces/Pjschiele1/axiomarc-showcase/resolve/main/assets/not-less-information-less-work.png)
+
+The public mechanism model is intentionally high level:
+
+**Know the State → Constrain the Work → Reduce Realized Cost**
+
+The implementation behind canonicalization, identity resolution, persistence, reconstruction, and policy behavior remains proprietary.
 
 ## Public evidence model
 
@@ -52,6 +58,7 @@ See [Architecture Overview](docs/architecture-overview.md).
 - [Benchmark Methodology](docs/benchmark-methodology.md)
 - [Integration Overview](docs/integration-overview.md)
 - [Machine-readable Evidence](evidence/evidence.json)
+- [Public Repository Notice](NOTICE.md)
 
 ## Public-release boundary
 
