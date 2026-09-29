@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "release": "AxiomARC public showcase v1",
+  "architecture_boundary": {
+    "axiomarc_role": "Canonical state, identity, lineage, lifecycle, validity, persistence intent, and reuse control",
+    "execution_role": "External systems remain responsible for retrieval, generation, evaluation, and other execution work"
+  },
+  "evidence_policy": {
+    "MEASURED": "Directly observed in the frozen validation workload.",
+    "DERIVED": "Calculated from measured values or validated identity/lifecycle rules.",
+    "PROJECTED": "Scaled scenario output; not a new physical run.",
+    "REFERENCE": "Measured value carried from a separate controlled persistence/reconstruction reference cell.",
+    "NOT_CLAIMED": "A metric the showcase deliberately does not infer."
+  },
+  "measured_anchor": {
+    "authority": "MEASURED",
+    "scope": "Frozen integrated validation workload",
+    "requests": 300,
+    "baseline_stage_calls": 900,
+    "controlled_stage_calls": 480,
+    "stage_calls_avoided": 420,
+    "retrieval_calls": 120,
+    "generation_calls": 160,
+    "evaluation_calls": 200,
+    "generation_engine_calls_avoided": 140,
+    "outcome_parity": "300/300",
+    "unsafe_reuse": 0,
+    "reference_pipeline_work": {
+      "baseline": 224400,
+      "controlled": 97920,
+      "avoided": 126480,
+      "avoided_percent": 56.36
+    },
+    "generation_token_work_avoided": 12880,
+    "evaluation_token_work_avoided": 5600,
+    "retrieval_source_work_avoided": 108000
+  },
+  "persistence_reference": {
+    "authority": "REFERENCE",
+    "scope": "Separate controlled persistence/reconstruction reference cell",
+    "logical_reusable_exact_kv_mib": 14.0,
+    "durable_canonical_bytes": 3339,
+    "representation_density_x": 4396.55,
+    "representation_reduction_percent": 99.9773,
+    "persist_write_ms": 99.087,
+    "restore_read_ms": 14.837,
+    "exact_reprime_ms": 37.342,
+    "exact_reprime_gpu_energy_j": 1.8683,
+    "restore_plus_reprime_ms": 52.179
+  },
+  "source_recurrence_characterization": {
+    "authority": "MEASURED_CHARACTERIZATION",
+    "scope": "Controlled source-recurrence characterization; not a customer-population estimate",
+    "profiles": [
+      {
+        "profile": "High",
+        "repeated_exposure_percent": 75.74,
+        "actually_eliminated_percent": 70.09
+      },
+      {
+        "profile": "Moderate",
+        "repeated_exposure_percent": 46.37,
+        "actually_eliminated_percent": 37.17
+      },
+      {
+        "profile": "Low",
+        "repeated_exposure_percent": 16.90,
+        "actually_eliminated_percent": 14.99
+      }
+    ]
+  },
+  "not_claimed": [
+    "Logical reusable exact-KV footprint equals physical VRAM returned to the allocator.",
+    "GPU seconds or joules saved can be inferred from generation-call avoidance alone.",
+    "The public Space is a new live retrieval/generation/evaluation benchmark run.",
+    "Projected workload volumes are new physical measurements.",
+    "Controlled source-recurrence profiles represent a typical customer population.",
+    "The public showcase contains or exposes the proprietary production AxiomARC runtime."
+  ]
+}
